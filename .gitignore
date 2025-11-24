@@ -1,0 +1,15 @@
+﻿################################################################################
+# 이 .gitignore 파일은 Microsoft(R) Visual Studio에서 자동으로 만들어졌습니다.
+################################################################################
+
+/WinformExplore/bin/Debug/net8.0-windows
+/.vs
+/WinformExplore/obj
+/WpfControlLibrary1/obj
+/WpfControlLibrary2/obj
+/WpfCustomControlLibrary1/bin/Debug/net8.0-windows
+/WpfCustomControlLibrary1/obj
+/WpfExplorer/bin/Debug/net8.0-windows
+/WpfExplorer/obj
+/WpfExplorer.Support/bin/Debug/net8.0-windows
+/WpfExplorer.Support/obj
