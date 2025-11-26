@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf"
+                    xmlns:based="clr-namespace:WpfExplorer.Support.UI.Units;assembly=WpfExplorer.Support"
+                    xmlns:views="clr-namespace:WpfExplorer.Forms.UI.Views">
+    <Style TargetType="{x:Type views:ExplorerWindow}"
+           BasedOn="{StaticResource {x:Type based:DarkWindow}}">
+        <Setter Property="Content">
+            <Setter.Value>
+                <james:JamesRegion RegionName="MainRegion"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

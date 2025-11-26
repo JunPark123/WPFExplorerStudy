@@ -17,6 +17,38 @@
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </UserControl.Resources>
-    <units:MaximizeButton Width="80" Height="40"/>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <units:MaximizeButton Grid.Column="1" Width="80" Height="40"/>
+        <units:MinimizeButton Grid.Column="2" Width="80" Height="40"/>
+        <units:CloseButton Grid.Column="3" Width="80" Height="40"/>
+        <Button Grid.Column="4" Width="70" Height="40">
+            <Button.Content>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid Grid.Column="1">
+                        <TextBlock Grid.Column="1" Text="aaa"/>
+                    </Grid>
+                    <Grid Grid.Column="2">
+                        <DataGrid Grid.Column="2"/>
+                    </Grid>
+                    <Grid Grid.Column="3">
+                        <Slider />
+                    </Grid>
+                </Grid>
+            </Button.Content>
+        </Button>
+    </Grid>
 
 </UserControl>

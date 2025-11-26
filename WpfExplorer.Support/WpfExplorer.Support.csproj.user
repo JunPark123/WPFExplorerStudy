@@ -5,5 +5,8 @@
     <Compile Update="UI\Previews\PrieviewUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UI\Previews\Window1.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
