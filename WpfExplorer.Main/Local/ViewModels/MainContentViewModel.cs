@@ -28,7 +28,7 @@ namespace WpfExplorer.Main.Local.ViewModels
         [RelayCommand]
         private void FolderChanged(FolderInfo info)
         {
-            MessageBox.Show($"Selected : {info.Name}");
+            //MessageBox.Show($"Selected : {info.Name}");
             _fileService.RefreshSubDirectories(info);
         }
     }
