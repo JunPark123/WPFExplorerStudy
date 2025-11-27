@@ -13,3 +13,7 @@
 /WpfExplorer/obj
 /WpfExplorer.Support/bin/Debug/net8.0-windows
 /WpfExplorer.Support/obj
+/WpfExplorer.Main/bin/Debug/net8.0-windows
+/WpfExplorer.Main/obj
+/WpfExplorer.Forms/bin/Debug/net8.0-windows
+/WpfExplorer.Forms/obj
