@@ -17,3 +17,5 @@
 /WpfExplorer.Main/obj
 /WpfExplorer.Forms/bin/Debug/net8.0-windows
 /WpfExplorer.Forms/obj
+**/bin/
+**/obj/

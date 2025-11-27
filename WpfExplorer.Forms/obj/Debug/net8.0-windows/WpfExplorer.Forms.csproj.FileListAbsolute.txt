@@ -5,7 +5,10 @@ E:\source\repos\WpfExplorer\WpfExplorer.Forms\bin\Debug\net8.0-windows\WpfExplor
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\bin\Debug\net8.0-windows\WpfExplorer.Support.pdb
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplorer.Forms.csproj.AssemblyReference.cache
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\Themes\Generic.baml
+E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplorer.Forms_MarkupCompile.cache
+E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplorer.Forms_MarkupCompile.lref
+E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\Themes\Views\ExplorerWindow.baml
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplorer.Forms.g.resources
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplorer.Forms.GeneratedMSBuildEditorConfig.editorconfig
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplorer.Forms.AssemblyInfoInputs.cache
@@ -17,6 +20,3 @@ E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplor
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\refint\WpfExplorer.Forms.dll
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplorer.Forms.pdb
 E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\ref\WpfExplorer.Forms.dll
-E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
-E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\WpfExplorer.Forms_MarkupCompile.lref
-E:\source\repos\WpfExplorer\WpfExplorer.Forms\obj\Debug\net8.0-windows\Themes\Views\ExplorerWindow.baml
