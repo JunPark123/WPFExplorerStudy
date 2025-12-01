@@ -15,12 +15,12 @@ namespace WpfExplorer.Main.Local.ViewModels
     /// </summary>
     public partial class MainContentViewModel : ObservableBase
     {
-        //public ICommand FolderChangedCommand { get; init; }
+        //del//public ICommand FolderChangedCommand { get; init; }
         private readonly FileService _fileService;
         public List<FolderInfo> Roots { get; init; } //init 키워드는 객체 생성 시에만 초기화 할 수 있음
         public MainContentViewModel(FileService fileService)
         {
-            //FolderChangedCommand = new RelayCommand<FolderInfo>(FolderChanged);
+            //del//FolderChangedCommand = new RelayCommand<FolderInfo>(FolderChanged);
             _fileService = fileService;
             Roots = fileService.GenerateRootNodes();
         }
@@ -28,7 +28,7 @@ namespace WpfExplorer.Main.Local.ViewModels
         [RelayCommand]
         private void FolderChanged(FolderInfo info)
         {
-            //MessageBox.Show($"Selected : {info.Name}");
+            //del//MessageBox.Show($"Selected : {info.Name}");
             _fileService.RefreshSubDirectories(info);
         }
     }

@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:view ="clr-namespace:WpfExplorer.Main.UI.Views;assembly=WpfExplorer.Main"
+        xmlns:units ="clr-namespace:WpfExplorer.Main.UI.Units;assembly=WpfExplorer.Main"
+        xmlns:units2 ="clr-namespace:WpfExplorer.Support.UI.Units;assembly=WpfExplorer.Support"
+        xmlns:local="clr-namespace:WpfApp1"        
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- CloseButton.xaml 사전 경로 -->
+                <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Views/MainContent.xaml"/>
+                <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MaximizeButton.xaml"/>
+                <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MinimizeButton.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <ToggleButton x:Name="MyToggle"
+            Height="100" Width="150" Margin="100"
+                      Content="{Binding IsChecked, ElementName=MyToggle}">
+            </ToggleButton>
+            <view:MainContent Height="100" Width="200"/>
+            <units:FolderTreeView Height="100" Width="200"/>
+            <units2:MaximizeButton Height="100" Width="200"/>
+        </StackPanel>
+    </Grid>
+</Window>

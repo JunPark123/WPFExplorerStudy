@@ -14,6 +14,7 @@ namespace WpfExplorer.Properties
         {
             containerRegistry.RegisterSingleton<DirectoryManager>();
             containerRegistry.RegisterSingleton<FileService>();
+            containerRegistry.RegisterSingleton<NavigatorService>();
         }
     }
 }
