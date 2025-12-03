@@ -33,10 +33,11 @@ namespace WpfExplorer.Main.Local.ViewModels
 
         private void _navigatorService_LocationChanged(object? sender, LocationChangedEventArgs e)
         {
-            List<FolderInfo> source = GetDirectoryItems(e.Current.FullPath);
+            //List<FolderInfo> source = GetDirectoryItems(e.Current.FullPath);
 
-            Files.Clear();
-            Files.AddRange(source);
+            //Files.Clear();
+            //Files.AddRange(source);
+            _fileService.TryRefreshFiles(Files, out bool isDenied);
         }
 
         private List<FolderInfo> GetDirectoryItems(string fullPath)

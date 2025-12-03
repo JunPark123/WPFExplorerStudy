@@ -14,7 +14,7 @@ namespace WpfExplorer.Main.UI.Units
 
         protected override DependencyObject GetContainerForItemOverride()
         {
-            Debug.WriteLine("들어옴");
+            //Debug.WriteLine("들어옴");
             return new FolderTreeItem();
         }
     }

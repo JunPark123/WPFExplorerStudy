@@ -6,26 +6,36 @@
         xmlns:view ="clr-namespace:WpfExplorer.Main.UI.Views;assembly=WpfExplorer.Main"
         xmlns:units ="clr-namespace:WpfExplorer.Main.UI.Units;assembly=WpfExplorer.Main"
         xmlns:units2 ="clr-namespace:WpfExplorer.Support.UI.Units;assembly=WpfExplorer.Support"
-        xmlns:local="clr-namespace:WpfApp1"        
+        xmlns:local="clr-namespace:WpfApp1"
+        xmlns:vm ="clr-namespace:WpfApp1.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Background="Black">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <!-- CloseButton.xaml 사전 경로 -->
-                <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Views/MainContent.xaml"/>
-                <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MaximizeButton.xaml"/>
-                <ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MinimizeButton.xaml"/>
+                <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Generic.xaml"/>
+                <!--<ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Views/MainContent.xaml"/>-->
+                <!--<ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Units/PolygonSelectorItem.xaml"/>-->
+                <!--<ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MaximizeButton.xaml"/>-->
+                <!--<ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MinimizeButton.xaml"/>-->
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
+        <Grid.DataContext>
+            <vm:PolygonTestViewModels/>
+        </Grid.DataContext>
         <StackPanel Orientation="Horizontal">
-            <ToggleButton x:Name="MyToggle"
-            Height="100" Width="150" Margin="100"
-                      Content="{Binding IsChecked, ElementName=MyToggle}">
-            </ToggleButton>
-            <local:UserControl1 Height="Auto" Width="Auto" Background="Black"/>
+            <StackPanel.DataContext>
+                <vm:PolygonTestViewModels/>
+            </StackPanel.DataContext>
+            <local:UserControl1 Height="Auto" Width="Auto"/>
+            <units:PolygonSelectorItem
+                Width="200"
+                Height="22"
+                Margin="20"/>
+
         </StackPanel>
     </Grid>
 </Window>
