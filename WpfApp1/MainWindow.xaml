@@ -25,9 +25,7 @@
             Height="100" Width="150" Margin="100"
                       Content="{Binding IsChecked, ElementName=MyToggle}">
             </ToggleButton>
-            <view:MainContent Height="100" Width="200"/>
-            <units:FolderTreeView Height="100" Width="200"/>
-            <units2:MaximizeButton Height="100" Width="200"/>
+            <local:UserControl1 Height="Auto" Width="Auto" Background="Black"/>
         </StackPanel>
     </Grid>
 </Window>

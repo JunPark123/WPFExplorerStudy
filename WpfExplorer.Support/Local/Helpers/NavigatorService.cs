@@ -17,7 +17,7 @@ namespace WpfExplorer.Support.Local.Helpers
         public FileInfoBase Current => currentLocation;
         public event EventHandler<LocationChangedEventArgs> LocationChanged;
 
-        public void ChangedLocation(FileInfoBase newLocation)
+        public void ChangeLocation(FileInfoBase newLocation)
         {
             if (currentLocation != null)
             {
@@ -48,7 +48,7 @@ namespace WpfExplorer.Support.Local.Helpers
 
             if (parentDir != null)
             {
-                ChangedLocation(new FileInfoBase { FullPath = parentDir.FullName });
+                ChangeLocation(new FileInfoBase { FullPath = parentDir.FullName });
             }
         }
 

@@ -13,10 +13,12 @@ namespace WpfExplorer.Support.Local.Helpers
     public class FileService
     {
         private readonly DirectoryManager _directoryManger;
+        private readonly NavigatorService _navigatorService;
 
-        public FileService(DirectoryManager diretoryManger)
+        public FileService(DirectoryManager diretoryManger, NavigatorService navigatorService)
         {
             _directoryManger = diretoryManger;
+            _navigatorService = navigatorService;
         }
 
         public List<FolderInfo> GenerateRootNodes()

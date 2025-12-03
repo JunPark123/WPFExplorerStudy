@@ -4,6 +4,8 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Units/ExpandButton.xaml"/>
+        <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Units/FileListItem.xaml"/>
+        <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Units/FileListBox.xaml"/>
         <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Units/FolderTreeItem.xaml"/>
         <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Units/FolderTreeView.xaml"/>
         <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Views/MainContent.xaml"/>
