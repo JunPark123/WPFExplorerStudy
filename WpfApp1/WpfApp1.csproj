@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WpfExplorer.Location\WpfExplorer.Location.csproj" />
     <ProjectReference Include="..\WpfExplorer.Main\WpfExplorer.Main.csproj" />
   </ItemGroup>
 

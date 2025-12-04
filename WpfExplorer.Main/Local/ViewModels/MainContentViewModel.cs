@@ -20,6 +20,7 @@ namespace WpfExplorer.Main.Local.ViewModels
         private readonly NavigatorService _navigatorService;
         public List<FolderInfo> Roots { get; init; } //init 키워드는 객체 생성 시에만 초기화 할 수 있음
         public ObservableCollection<FolderInfo> Files { get; init; }
+        public ObservableCollection<LocationInfo> Locations { get; init; }
         public MainContentViewModel(FileService fileService, NavigatorService navigatorService)
         {
             //del//FolderChangedCommand = new RelayCommand<FolderInfo>(FolderChanged);
@@ -29,6 +30,7 @@ namespace WpfExplorer.Main.Local.ViewModels
 
             Roots = fileService.GenerateRootNodes();
             Files = new();
+            Locations = new();
         }
 
         private void _navigatorService_LocationChanged(object? sender, LocationChangedEventArgs e)
@@ -38,6 +40,7 @@ namespace WpfExplorer.Main.Local.ViewModels
             //Files.Clear();
             //Files.AddRange(source);
             _fileService.TryRefreshFiles(Files, out bool isDenied);
+            _fileService.RefreshLocations(Locations);
         }
 
         private List<FolderInfo> GetDirectoryItems(string fullPath)

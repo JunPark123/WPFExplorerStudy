@@ -12,7 +12,7 @@ namespace WpfExplorer.Forms.Local.ViewModels
 {
     public class ExplorerViewModel : ObservableBase, IViewLoadable
     {
-        private readonly IContainerProvider _containerProvider; 
+        private readonly IContainerProvider _containerProvider;
         private readonly IRegionManager _regionManager;
 
         public List<FolderInfo> Roots { get; init; }
@@ -25,16 +25,22 @@ namespace WpfExplorer.Forms.Local.ViewModels
 
         public void OnLoaded(IViewable view) //해당 뷰모델의 뷰가 로드되는 시점에 호출됨
         {
-            IRegion mainRegion = _regionManager.Regions["MainRegion"]; //해당 Region을 찾아옴
-            IViewable mainContent = _containerProvider.Resolve<IViewable>("MainContent"); 
-            //^^^^^ ContainerProvider는 타입과 이름으로 등록된 싱글턴 객체를 불러오는 역할을 함
+            ImportContent("MainContent", "MainRegion");
+            ImportContent("LocationContent", "LocationRegion");                
+        }
 
-            if (!mainRegion.Views.Contains(mainContent)) //여러 뷰를 등록하기 때문에 중복 여부를 확인함
+        private void ImportContent(string name, string regionName)
+        {           
+            //ContainerProvider는 타입과 이름으로 등록된 싱글턴 객체를 불러오는 역할을 함
+            IViewable content = _containerProvider.Resolve<IViewable>(name);             
+            IRegion region = _regionManager.Regions[regionName]; //해당 Region을 찾아옴
+
+            if (!region.Views.Contains(content)) //여러 뷰를 등록하기 때문에 중복 여부를 확인함
             {
-                mainRegion.Add(mainContent);
+                region.Add(content);
             }
 
-            mainRegion.Activate(mainContent); 
+            region.Activate(content);
         }
     }
 }

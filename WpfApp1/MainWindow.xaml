@@ -6,6 +6,8 @@
         xmlns:view ="clr-namespace:WpfExplorer.Main.UI.Views;assembly=WpfExplorer.Main"
         xmlns:units ="clr-namespace:WpfExplorer.Main.UI.Units;assembly=WpfExplorer.Main"
         xmlns:units2 ="clr-namespace:WpfExplorer.Support.UI.Units;assembly=WpfExplorer.Support"
+        xmlns:loc ="clr-namespace:WpfExplorer.Location.UI.Units;assembly=WpfExplorer.Location"
+        xmlns:locv ="clr-namespace:WpfExplorer.Location.UI.Views;assembly=WpfExplorer.Location"
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:vm ="clr-namespace:WpfApp1.ViewModels"
         mc:Ignorable="d"
@@ -15,6 +17,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <!-- CloseButton.xaml 사전 경로 -->
                 <ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="/WpfExplorer.Location;component/Themes/Generic.xaml"/>
                 <!--<ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Views/MainContent.xaml"/>-->
                 <!--<ResourceDictionary Source="/WpfExplorer.Main;component/Themes/Units/PolygonSelectorItem.xaml"/>-->
                 <!--<ResourceDictionary Source="/WpfExplorer.Support;component/Themes/Units/MaximizeButton.xaml"/>-->
@@ -35,6 +38,9 @@
                 Width="200"
                 Height="22"
                 Margin="20"/>
+            <loc:LocatorButton ActionType="Redo"/>
+            <loc:LocatorTextBox Width="Auto"/>
+            <locv:LocationContent/>
 
         </StackPanel>
     </Grid>
