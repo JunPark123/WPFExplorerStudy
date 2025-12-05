@@ -31,28 +31,18 @@
                         BorderThickness="{TemplateBinding BorderThickness}"
                         UseLayoutRounding="{TemplateBinding UseLayoutRounding}"
                         SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                            </Grid.ColumnDefinitions>
-                            <Border Grid.ColumnSpan="4"
-                                    Background="#222222"/>
-                            <units:MinimizeButton Grid.Column="1"/>
-                            <units:MaximizeButton Grid.Column="2"/>
-                            <units:CloseButton Grid.Column="3"/>
-                            <ContentPresenter
-                                Grid.Row="1"
-                                Grid.ColumnSpan="4"
-                                ContentTemplate="{TemplateBinding ContentTemplate}"
-                                ContentSource="Content"/>
-                        </Grid>
+                        <james:JamesGrid Rows="Auto, *" Columns="*, Auto, Auto, Auto">
+                            <ContentPresenter ContentTemplate="{TemplateBinding LocationTemplate}"
+                                              ContentSource="Location"/>
+                            <units:MinimizeButton/>
+                            <units:MaximizeButton/>
+                            <units:CloseButton/>
+                            <ContentPresenter Grid.ColumnSpan="4" 
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                                              ContentSource="Content"/>
+                            
+                           
+                        </james:JamesGrid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
@@ -60,7 +50,7 @@
         
 
     </Style>
-    
+
     
     
 </ResourceDictionary>

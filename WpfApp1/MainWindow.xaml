@@ -33,13 +33,10 @@
             <StackPanel.DataContext>
                 <vm:PolygonTestViewModels/>
             </StackPanel.DataContext>
-            <local:UserControl1 Height="Auto" Width="Auto"/>
-            <units:PolygonSelectorItem
-                Width="200"
-                Height="22"
-                Margin="20"/>
+            <local:UserControl1/>
+            <units:PolygonSelectorItem/>
             <loc:LocatorButton ActionType="Redo"/>
-            <loc:LocatorTextBox Width="Auto"/>
+            <loc:LocatorTextBox/>
             <locv:LocationContent/>
 
         </StackPanel>
